@@ -56,10 +56,16 @@ router.get('/:id/edit', async (req, res, next)=>{
 
 //Update Route ----->
 
-// router.put('/:id', async (req, res, next)=>{
-//     try{
+router.put('/:id', async (req, res, next)=>{
+    try{
+        const updateCatalog = await db.Catalog.findByAndUpdate(req.params.id, req.body);
+        return res.redirect('/catalog');
+    }catch{
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+});
 
-//     }
-// })
 
 module.exports = router;
