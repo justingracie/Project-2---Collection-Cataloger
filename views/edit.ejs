@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs', {pageName: 'Catalog'}) %>
+<body>
+    <%-include('partials/nav.ejs') %>
+
+    <form method="POST" action="/catalog/<%=catalog._id%>?_method=PUT">
+        <div>
+            <label>Artist</label>
+            <input type="text" name="artist" value="<%=catalog.artist%>">
+        </div>
+        <div>
+            <label>Album</label>
+            <input type="text" name="album" value="<%=catalog.album%>">
+        </div>
+        <div>
+            <label>Image</label>
+            <input type="img" name="image" value="<%=catalog.image%>">
+        </div>
+        <div>
+            <label>Item Value</label>
+            <input type="number" name="itemValue" value="<%=catalog.itemValue%>">
+        </div>
+        <div>
+            <label>Media Format</label>
+            <input type="text" name="mediaFormat" value="<%=catalog.mediaFormat%>">
+        </div>
+        <div>
+            <label>Release Year</label>
+            <input type="text" name="releaseYear" value="<%=catalog.releaseYear%>">
+        </div>
+        <div>
+            <label>Track List</label>
+            <input type="text" name="trackList" value="<%=catalog.trackList%>">
+        </div>
+        <div>
+            <label>Collector Comments</label>
+            <input type="text" name="collectorComments" value="<%=catalog.collectorComment%>">
+        </div>
+        <div>
+            <label>Spotify Link</label>
+            <input type="text" name="spotifyLink" value="<%=catalog.spotifyLink%>">
+        </div>
+        <div>
+            <label>Apple Music Link</label>
+            <input type="text" name="appleMusicLink" value="<%=catalog.appleMusicLink%>">
+        </div>
+     
+        <input type="submit" value="Edit Catalog<%=catalog.name%>">
+    </form>
+</body>
+</html>

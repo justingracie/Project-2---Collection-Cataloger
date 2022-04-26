@@ -1,7 +1,9 @@
 const express = require('express');
 
+
 const router = express.Router();
 const db = require('../models')
+
 
 //====================
 //  ROUTES
@@ -14,16 +16,19 @@ router.get('/', async (req, res, next)=>{
         const catalog = await db.Catalog.find({});
         const context = {catalog};
         return res.render('index.ejs', context);
+
     }catch(error){
         console.log(error);
         req.error = error;
         return next();
+
     }
 });
 
 //New Route ---->
 
 router.get('/new', (req, res)=>{
+
     res.render('new.ejs');
 });
 
