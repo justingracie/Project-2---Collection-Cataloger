@@ -1,0 +1,29 @@
+{
+  "name": "project-2---collection-cataloger",
+  "version": "1.0.0",
+  "description": "This site is meant to be used as a cataloging tools for collectors of Vinyl, CDs, and Cassette tapes.  Collectors can add their collections to the website to keep track of an extensive collection or just show off some cool items they've come across. Think Discogs meets social media.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justingracie/Project-2---Collection-Cataloger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justingracie/Project-2---Collection-Cataloger/issues"
+  },
+  "homepage": "https://github.com/justingracie/Project-2---Collection-Cataloger#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.15"
+  }
+}
