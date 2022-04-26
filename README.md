@@ -62,7 +62,6 @@ Our website is going to be a resource for music media collectors to catalog thei
 * Details page include: 
 
 - Tracklist
-- Optional review
 - Approximate market Value
 - Link to edit the item
 - Review by Owner Part (of initial collection creation)
@@ -80,6 +79,7 @@ Our website is going to be a resource for music media collectors to catalog thei
 - organize collections alphabettically or by Genre
 - Music Blog
 - Gear Section: For musicians to catalog and submit write ups about their gear purchases.
+- Reviews of albums by site visitors.
 
 
 # References
