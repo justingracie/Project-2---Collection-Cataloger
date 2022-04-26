@@ -1,4 +1,4 @@
-module.exports = {
-    Catalog: require('./Catalog'),
-    Reviews: require('./Reviews')
+module.exports ={
+    catalog: require('./Catalog'),
+    // reviews: require('./Reviews')
 };
