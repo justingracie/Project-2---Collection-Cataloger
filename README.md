@@ -6,6 +6,15 @@ This site is meant to be used as a cataloging tools for collectors of Vinyl, CDs
 
 In this Project Jacob and I will be building a Full CRUD express application. When buildling out our application we will divide respobsiblities as follows.  Directories and files Justin: Config/db.connections, Controllers, Server.js, and Models/.  Directories and files Jacob: /views including ejs files and partials/ public/styles main.css.  Jacob will take the lead on styling methods based on wireframes with Justin consulting along the way. Justin will setup the github, and mongoDB with sharing permissions. 
 
+* Routes
+
+- '/' - GET - Index - retrieves entire Catalog with artist, ablum, and album image. 
+- '/:id' - GET - Show - retrieves single album with displaying details with Edit and Delete buttons.
+- '/new' - GET - New - displays a form to add new items to the catalog.
+- '/' - POST - Create - renders the new album info to the catalog.
+- '/:id/edit' - PUT - Update - this route will send updated data to the selected album. 
+- '/:id' - DELETE - Delete - deletes an indvidual album and associated data from the Catalog.
+
 # Database Models planning
 
 * Catalog Schema atrributes: 
@@ -17,7 +26,7 @@ In this Project Jacob and I will be building a Full CRUD express application. Wh
 * Review Schema (review will be referenced to Catalog):
 
 
-!["Review"](./Images/ReveiwSchema.PNG)
+!["Review"](./Images/ReviewSchema.PNG)
 
 User will be stretch based on User Authenitcation capability: 
 
@@ -28,6 +37,9 @@ User will be stretch based on User Authenitcation capability:
 
 
 !["ERD"](./Images/ERD_Diagram.PNG)
+
+
+
 # User Story
 
 Our website is going to be a resource for music media collectors to catalog their collections, provide write ups, estimate collection values, and view the collections of others.  Users will be able to create, read, update, and delete items from their collections. They will also be able to comment on individual collections of others.
