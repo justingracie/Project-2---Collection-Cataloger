@@ -9,12 +9,15 @@ In this Project Jacob and I will be building a Full CRUD express application. Wh
 # Database Models planning
 
 * Catalog Schema atrributes: 
+
+
 !["Catalog"](./Images/CatalogSchema.PNG)
 
-* Review Schema (review will be referenced to Catalog)
-- rating: number
-- content: string
-- (mongoose catalog ref)
+
+* Review Schema (review will be referenced to Catalog):
+
+
+!["Review"](./Images/ReveiwSchema.PNG)
 
 User will be stretch based on User Authenitcation capability: 
 
