@@ -22,7 +22,6 @@ const catalogSchema = new mongoose.Schema({
     },
     mediaFormat: {
         type: String, 
-
     },
     realeaseYear:{
         type: String
