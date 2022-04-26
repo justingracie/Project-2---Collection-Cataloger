@@ -9,29 +9,30 @@ In this Project Jacob and I will be building a Full CRUD express application. Wh
 # Database Models planning
 
 * Catalog Schema atrributes: 
+- ablum: string
+- artist: string
+- image: string
+- item value: number
+- media format: string
+- year of release: string
+- tracklist: array of strings
+- Collector Comments: string
+- spotify link: string
+- apple music link: string
 
-ablum: string
-artist: string
-image: string
-item value: number
-media format: string
-year of release: string
-tracklist: array of strings
-Collector Comments: string
-spotify link: string
-apple music link: string
+
 
 * Review Schema (review will be referenced to Catalog)
-rating: number
-content: string
-(mongoose catalog ref)
+- rating: number
+- content: string
+- (mongoose catalog ref)
 
 User will be stretch based on User Authenitcation capability: 
 
 * User Schema:
 
-name: string
-email: string
+- name: string
+- email: string
 
 
 !["ERD"](./Images/ERD_Diagram.PNG)
@@ -50,31 +51,31 @@ Our website is going to be a resource for music media collectors to catalog thei
 
 * Index Page Include: 
 
- Artist
- Album Title
- Image of album cover as clickable link to details page
+- Artist
+- Album Title
+- Image of album cover as clickable link to details page
 
 * Details page include: 
 
- Tracklist
- Optional review
- Approximate market Value
- Link to edit the item
- Review by Owner Part (of initial collection creation)
- Format: Vinyl, cassette, CD
- Year of release
- Genre
- Delete button to remove item from Catalog
- Links to album on Popular streaming services
- Basic styling with flex box and grid
+- Tracklist
+- Optional review
+- Approximate market Value
+- Link to edit the item
+- Review by Owner Part (of initial collection creation)
+- Format: Vinyl, cassette, CD
+- Year of release
+- Genre
+- Delete button to remove item from Catalog
+- Links to album on Popular streaming services
+- Basic styling with flex box and grid
 
 # Stretch
 
-User Authenication
-Sass Styling
-organize collections alphabettically or by Genre
-Music Blog
-Gear Section: For musicians to catalog and submit write ups about their gear purchases.
+- User Authenication
+- Sass Styling
+- organize collections alphabettically or by Genre
+- Music Blog
+- Gear Section: For musicians to catalog and submit write ups about their gear purchases.
 
 
 # References
