@@ -6,8 +6,8 @@ const express = require('express');
 const PORT = 4000;
 const app = express();
 // const methodOverride = require('method-override');
-// const catalogController = require('/controllers/catalog_controller');
-// const reviewController = require('/controllers/review_controller');
+// const catalogController = require('./controllers/catalog_controller');
+// const reviewController = require('./controllers/review_controller');
 
 // app.set('view engine', 'ejs');
 
