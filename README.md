@@ -9,18 +9,7 @@ In this Project Jacob and I will be building a Full CRUD express application. Wh
 # Database Models planning
 
 * Catalog Schema atrributes: 
-- ablum: string
-- artist: string
-- image: string
-- item value: number
-- media format: string
-- year of release: string
-- tracklist: array of strings
-- Collector Comments: string
-- spotify link: string
-- apple music link: string
-
-
+!["Catalog"](./Images/CatalogSchema.PNG)
 
 * Review Schema (review will be referenced to Catalog)
 - rating: number
