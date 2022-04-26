@@ -57,8 +57,9 @@ router.get('/:id/edit', async (req, res, next)=>{
 
 //Update Route ----->
 
-// router.put('/:id', async (req, res, next)=>{
-//     try{
+=======
+router.put('/:id', async (req, res, next)=>{
+    try{
         
-//     }
-// })
+    }
+})
