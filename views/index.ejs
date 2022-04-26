@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs', { pageName: 'Catalog' }) %>
+  <body>
+    <%- include('partials/nav.ejs') %>
+    <main>
+      <h1>Catalog</h1>
+      <div class="catalog">
+        <% for(let i = 0; i < catalog.length; i++){ %> <% const catalog =
+        catalogs[i] %>
+        <a href="<%=catalog.link%>" class="catalog" target="_blank">
+          <img src="<%=catalog.imageUrl%>" alt="<%=catalog.name %>" />
+          <p><%= catalog.artist %></p>
+          <p><%= catalog.album %></p>
+        </a>
+        <% } %>
+      </div>
+    </main>
+  </body>
+</html>
