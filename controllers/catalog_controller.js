@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const db = require('../models')
+const db = require("../models");
 
 //====================
 //  ROUTES
@@ -8,69 +8,69 @@ const db = require('../models')
 
 //Index Route ---->
 
-router.get('/', async (req, res, next)=>{
-    try{
-        const catalog = await db.Catalog.find({});
-        const context = {catalog};
-        console.log(catalog)
-        return res.render('index.ejs', context);
-
-    }catch(error){
-        console.log(error);
-        req.error = error;
-        return next();
-
-    }
+router.get("/", async (req, res, next) => {
+  try {
+    const catalog = await db.Catalog.find({});
+    const context = { catalog };
+    console.log(catalog);
+    return res.render("index.ejs", context);
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    next();
+  }
 });
 
 //New Route ---->
 
-router.get('/new', (req, res)=>{
-
-    res.render('new.ejs');
+router.get("/new", (req, res) => {
+  res.render("new.ejs");
 });
 
 //Create Route ---->
 
-router.post('/', async (req, res, next)=>{
-    try{
-        const createdCatalog = await db.Catalog.create(req.body);
-        res.redirect('/catalog');
-    }catch(error){
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-
+router.post("/", async (req, res, next) => {
+  try {
+    const createdCatalog = await db.Catalog.create(req.body);
+    res.redirect("/catalog");
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
+  }
 });
 
 // Edit route---->
 
-router.get('/:id/edit', async (req, res, next)=>{
-    try{
-        const updatedCatalog = await db.Catalog.findById(req.params.id);
-        return res.render('edit.ejs', {catalog: updatedCatalog});
-    }catch(error){
-        console.log(error);
-        req.error = error;
-        return next();
-    }
+router.get("/:id/edit", async (req, res, next) => {
+  try {
+    const updatedCatalog = await db.Catalog.findById(req.params.id);
+    return res.render("edit.ejs", { catalog: updatedCatalog });
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
+  }
 });
 
 //Update Route ----->
 
-router.put('/:id', async (req, res, next)=>{
-    try{
-        const updateCatalog = await db.Catalog.findByAndUpdate(req.params.id, req.body);
-        return res.redirect('/catalog');
-    }catch{
-        console.log(error);
-        req.error = error;
-        return next();
-    }
+router.put("/:id", async (req, res, next) => {
+  try {
+    const updateCatalog = await db.Catalog.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    );
+    return res.redirect("/catalog");
+  } catch (error) {
+    // console.log(error);nodemon
+
+    req.error = error;
+    return next();
+  }
 });
 
 //Show Route ----->
 
-router.get('/:id')
+router.get("/:id");
 module.exports = router;
