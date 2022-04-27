@@ -6,53 +6,47 @@
     <main>
         <h1>Add Album to Catalog </h1>
         <form method="POST" action="/catalog">
-           
-            <div class="mb-3">
-                <label for="artist" class="form-label">Artist</label>
-                <input type="text" class="form-control input" id="artist" placeholder="Artist name...">
+            <div>
+                <label for="artist">Artist</label>
+                <input name="artist" type="text" placeholder="Artist name..." />
             </div>
-           
-            <div class="mb-3">
-                <label for="album" class="form-label">Album</label>
-                <input type="text" class="form-control input" id="album" placeholder="Album name...">
+            <div>
+                <label for="album">Album</label>
+                <input name="album" type="text" placeholder="Album name..." />
             </div>
-           
-            <div class="mb-3">
-                <label for="itemValue" class="form-label">Item Value</label>
-                <input type="text" class="form-control input" id="itemValue" placeholder="Cost of Album...">
+            <div>
+                <label for="image">Album Art</label>
+                <input name="image" type="text" placeholder="Album art URL..." />
             </div>
-           
-            <div class="mb-3">
-                <label for="mediaFormat" class="form-label">Media Format</label>
-                <input type="text" class="form-control input" id="mediaFormat" placeholder="Is it a CD, Cassette, Vinyl?...">
+            <div>
+                <label for="itemValue">Item Value</label>
+                <input name="itemValue" type="number" placeholder="Cost of album..." /> 
             </div>
-           
-            <div class="mb-3">
-                <label for="releaseYear" class="form-label">Release Year</label>
-                <input type="text" class="form-control input" id="releaseYear" placeholder="Year of release...">
+            <div>
+                <label for="mediaFormat">Media Format</label>
+                <input name="mediaFormat" type="text" placeholder="Media format..." />
             </div>
-           
-            <div class="mb-3">
-                <label for="trackList" class="form-label">Track List</label>
-                <input type="text" class="form-control input" id="trackList" placeholder="Name of the track...">
+            <div>
+                <label for="releaseYear">Release Year</label>
+                <input name="releaseYear" type="text" placeholder="Year of release..." />
             </div>
-            
-            <div class="mb-3">
-                <label for="collectorComments" class="form-label">Collector's Comments</label>
-                <input type="text" class="form-control input" id="collectorComments" placeholder="Comment...">
+            <div>
+                <label for="trackList">Track List</label>
+                <input name="trackList" type="text" placeholder="Name of track..." />
             </div>
-            
-            <div class="mb-3">
-                <label for="link" class="form-label">Spotify Link</label>
-                <input type="link" class="form-control input" id="spotifyLink" placeholder="Spotify link URL...">
+            <div>
+                <label for="collectorComments">Collector's Comments</label>
+                <input name="collectorComments" type="text" placeholder="Comment..." />
             </div>
-            
-            <div class="mb-3">
-                <label for="link" class="form-label">Apple Music Link</label>
-                <input type="link" class="form-control input" id="appleMusicLink" placeholder="Apple Music link URL...">
+            <div>
+                <label for="link">Spotify Link</label>
+                <input name="link" type="text" placeholder="Spotify link..." />
             </div>
-
-            <button type="button" class="btn btn-outline-secondary">Add album to catalog</button>
+            <div>
+                <label for="link">Apple Music Link</label>
+                <input name="link" type="text" placeholder="Apple Music link..." />
+            </div>
+            <button type="submit">Add Album to Catalog</button>
         </form>
     </main>
 </body>
