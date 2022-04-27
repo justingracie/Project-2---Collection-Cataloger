@@ -3,9 +3,8 @@
   <%- include('partials/head.ejs', { pageName: 'Catalog' }) %>
   <body>
     <%- include('partials/nav.ejs') %>
-    <main>
-      <h1>Catalog</h1>
-      <div class="catalog">
+    <main class="container">
+      <div class="grid">
         <% for(let i = 0; i < catalog.length; i++){ %> <% const album =
         catalog[i] %>
         <div>
