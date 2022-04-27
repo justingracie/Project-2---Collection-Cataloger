@@ -12,7 +12,6 @@ router.get('/', async (req, res, next)=>{
     try{
         const catalog = await db.Catalog.find({});
         const context = {catalog};
-        console.log(catalog);
         return res.render('index.ejs', context);
 
     }catch(error){
@@ -61,9 +60,9 @@ router.get('/:id/edit', async (req, res, next)=>{
 
 router.put('/:id', async (req, res, next)=>{
     try{
-        const updateCatalog = await db.Catalog.findByAndUpdate(req.params.id, req.body);
+        const updateCatalog = await db.Catalog.findByIdAndUpdate(req.params.id, req.body);
         return res.redirect('/catalog');
-    }catch{
+    }catch(error){
         console.log(error);
         req.error = error;
         return next();

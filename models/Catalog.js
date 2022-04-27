@@ -1,53 +1,55 @@
 //models/Discog
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const catalogSchema = new mongoose.Schema({
-    album:{
-        type: String,
-        required: [true, 'ablum cannot be empty :(']
+const catalogSchema = new mongoose.Schema(
+  {
+    album: {
+      type: String,
+      required: [true, "ablum cannot be empty :("],
     },
     artist: {
-        type: String, 
-        required: true
+      type: String,
+      required: true,
     },
     image: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     itemValue: {
-        type: Number,
-        min: [0, 'you cannot add a negative number'],
-        required: true
+      type: Number,
+      min: [0, "you cannot add a negative number"],
+      required: true,
     },
     mediaFormat: {
-        type: String, 
+      type: String,
     },
-    realeaseYear:{
-        type: String
+    realeaseYear: {
+      type: String,
     },
-    trackList:{
-        type: [String],
-        required: true
+    trackList: {
+      type: [String],
+      required: true,
     },
-    collectorComments:{
-        type: String
+    collectorComments: {
+      type: String,
     },
     spotifyLink: {
-        type: String, 
-        required: false
+      type: String,
+      required: false,
     },
     appleMusic: {
-        type: String,
-        required: false
-    }
-},
-    {
-        timestamps: true
-    }
-
+      type: String,
+      required: false,
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
-const Catalog = mongoose.model('Catalog', catalogSchema);
+
+const Catalog = mongoose.model("Catalog", catalogSchema);
+
 
 module.exports = Catalog;
