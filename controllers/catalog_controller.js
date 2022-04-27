@@ -12,6 +12,9 @@ router.get('/', async (req, res, next)=>{
     try{
         const catalog = await db.Catalog.find({});
         const context = {catalog};
+
+        console.log(catalog)
+
         return res.render('index.ejs', context);
 
     }catch(error){
