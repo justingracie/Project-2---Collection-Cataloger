@@ -9,9 +9,10 @@
         <% for(let i = 0; i < catalog.length; i++){ %> <% const album =
         catalog[i] %>
         <div>
-            <a href="/catalog/<%= album._id%>"> <img src="<%=album.image%>" alt="<%=album.name %>"> </a>
+            <a href="/catalog/<%= album._id%>"> 
+              <img src="<%=album.image%>" class="img-thumbnail album-art" alt="<%=album.name %>">
+            </a>
             
-
             <p><%= album.artist %></p>
 
             <p><%= album.album %></p> 
