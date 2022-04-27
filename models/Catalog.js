@@ -48,6 +48,8 @@ const catalogSchema = new mongoose.Schema(
   }
 );
 
+
 const Catalog = mongoose.model("Catalog", catalogSchema);
+
 
 module.exports = Catalog;
