@@ -1,9 +1,6 @@
 const express = require('express');
-
-
 const router = express.Router();
 const db = require('../models')
-
 
 //====================
 //  ROUTES
@@ -72,5 +69,7 @@ router.put('/:id', async (req, res, next)=>{
     }
 });
 
+//Show Route ----->
 
+router.get('/:id')
 module.exports = router;
