@@ -24,7 +24,7 @@ const catalogSchema = new mongoose.Schema(
     mediaFormat: {
       type: String,
     },
-    realeaseYear: {
+    releaseYear: {
       type: String,
     },
     trackList: {
