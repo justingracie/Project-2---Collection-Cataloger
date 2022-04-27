@@ -69,5 +69,7 @@ router.put('/:id', async (req, res, next)=>{
     }
 });
 
+//Show Route ----->
 
+router.get('/:id')
 module.exports = router;
