@@ -63,7 +63,7 @@ router.put("/:id", async (req, res, next) => {
       req.params.id,
       req.body
     );
-    return res.redirect("/catalog");
+    return res.redirect(`${req.params.id}`);
   } catch (error) {
     console.log(error);
     req.error = error;
