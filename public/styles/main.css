@@ -11,3 +11,8 @@ body {
 .input {
     max-width: 500px;
 }
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+}
