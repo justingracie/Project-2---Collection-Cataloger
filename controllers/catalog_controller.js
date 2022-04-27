@@ -12,12 +12,14 @@ router.get("/", async (req, res, next) => {
   try {
     const catalog = await db.Catalog.find({});
     const context = { catalog };
+
     console.log(catalog);
+
     return res.render("index.ejs", context);
   } catch (error) {
     console.log(error);
     req.error = error;
-    next();
+    return next();
   }
 });
 
@@ -63,8 +65,7 @@ router.put("/:id", async (req, res, next) => {
     );
     return res.redirect("/catalog");
   } catch (error) {
-    // console.log(error);nodemon
-
+    console.log(error);
     req.error = error;
     return next();
   }
@@ -72,5 +73,16 @@ router.put("/:id", async (req, res, next) => {
 
 //Show Route ----->
 
-router.get("/:id");
+router.get("/:id", async (req, res, next) => {
+  try {
+    const foundCatalog = await db.Catalog.findById(req.params.id);
+    const context = { catalogItem: foundCatalog };
+    res.render("show.ejs", context);
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
+  }
+});
+
 module.exports = router;

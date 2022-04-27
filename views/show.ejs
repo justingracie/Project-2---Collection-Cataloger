@@ -5,29 +5,28 @@
     <%-include('partials/nav.ejs') %>
 
 <div class="left">
-    <h1><%=catalog.artist%></h1>
-</br>
-    <h4><%=catalog.album%></h4>
-</br>
-    <img src="<%=catalog.image%>" alt="<%=catalog.album%>">
-</br>
-    <h4><%=catalog.releaseYear%></h4>
-</br>
-    <h4><%=catalog.itemValue%></h4>
-</br>
-    <a href="/catalog/<%=catalog._id%>/edit">Edit Album</a>
+    <h1><%=catalogItem.artist%></h1>
+    </br>
+    <h4><%=catalogItem.album%></h4>
+    </br>
+    <img src="<%=catalogItem.image%>" alt="<%=catalogItem.album%>">
+    </br>
+    <h4><%=catalogItem.releaseYear%></h4>
+    </br>
+    <h4><%=catalogItem.itemValue%></h4>
+    </br>
+    <a href="/catalogItem/<%=catalogItem._id%>/edit">Edit Album</a>
 </div>
-<div><h4><%=catalog.trackList%></h4></div>
-<div>
-    <h4><%=catalog.collectorComments%></h4>
-</br>
-    <a href="<%=catalog.spotifyLink%>">Listen on Spotify</a>
-</br>
-    <a href="<%=catalog.appleMusicLink%>">Listen on Apple Music</a>
-</br>
+
+<div><h4><%=catalogItem.trackList%></h4></div>
+    <div>
+    <h4><%=catalogItem.collectorComments%></h4>
+    </br>
+    <a href="<%=catalogItem.spotifyLink%>">Listen on Spotify</a>
+    </br>
+    <a href="<%=catalogItem.appleMusicLink%>">Listen on Apple Music</a>
+    </br>
 </div>
-   
-</br>
 </body>
 </html>
 
