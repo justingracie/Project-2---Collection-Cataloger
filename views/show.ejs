@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs', {pageName: 'Show'}) %>
+<body>
+    <%-include('partials/nav.ejs') %>
+
+<div class="left">
+    <h1><%=catalogItem.artist%></h1>
+    </br>
+    <h4><%=catalogItem.album%></h4>
+    </br>
+    <img src="<%=catalogItem.image%>" alt="<%=catalogItem.album%>">
+    </br>
+    <h4><%=catalogItem.releaseYear%></h4>
+    </br>
+    <h4><%=catalogItem.itemValue%></h4>
+    </br>
+    <a href="/catalogItem/<%=catalogItem._id%>/edit">Edit Album</a>
+</div>
+
+<div><h4><%=catalogItem.trackList%></h4></div>
+    <div>
+    <h4><%=catalogItem.collectorComments%></h4>
+    </br>
+    <a href="<%=catalogItem.spotifyLink%>">Listen on Spotify</a>
+    </br>
+    <a href="<%=catalogItem.appleMusicLink%>">Listen on Apple Music</a>
+    </br>
+</div>
+</body>
+</html>
+
