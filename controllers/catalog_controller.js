@@ -74,5 +74,16 @@ router.put('/:id', async (req, res, next)=>{
 
 //Show Route ----->
 
-router.get('/:id')
+router.get('/:id', (req,res, next)=>{
+    try{
+        const foundCatalog = await db.Catalog.findById(req.params.id);
+        const context = {catalogItem: foundCatalog};
+        res.render('show.ejs', context);
+    }catch(error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+});
+
 module.exports = router;
