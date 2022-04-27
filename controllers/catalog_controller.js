@@ -85,4 +85,17 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+//Delete/Destroy Route----->
+
+router.delete('/:id', async (req, res, next)=>{
+    try{
+        const deletedCatalog = await db.Catalog.findByIdAndDelete(req.params.id);
+        res.redirect('/catalog');
+    }catch(error){
+    console.log(error);
+    req.error = error;
+    return next();
+    }
+});
+
 module.exports = router;
