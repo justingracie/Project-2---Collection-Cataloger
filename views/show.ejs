@@ -20,15 +20,18 @@
     <h4><%=catalogItem.releaseYear%></h4>
     </br>
     <a href="/catalog/<%=catalogItem._id%>/edit">Edit Album</a>
+    <form method="POST" action="/catalog/<%=catalogItem._id%>?_method=DELETE">
+        <input type="submit" value="Delete Album">
+    </form>
 </div>
 
 <div><h4><%=catalogItem.trackList%></h4></div>
     <div>
     <h4><%=catalogItem.collectorComments%></h4>
     </br>
-    <a href="<%=catalogItem.spotifyLink%>">Listen on Spotify</a>
+    <a href="<%=catalogItem.spotifyLink%>" target="_blank">Listen on Spotify</a>
     </br>
-    <a href="<%=catalogItem.appleMusicLink%>">Listen on Apple Music</a>
+    <a href="<%=catalogItem.appleMusicLink%>" target="_blank">Listen on Apple Music</a>
     </br>
 </div>
 </body>

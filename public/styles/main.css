@@ -1,0 +1,9 @@
+.album-art {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.input {
+    max-width: 500px;
+}
