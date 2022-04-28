@@ -22,3 +22,11 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
+
+.left {
+    text-align: justify;
+}
+
+.middle {
+    text-align: center;
+}
