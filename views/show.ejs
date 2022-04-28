@@ -26,9 +26,17 @@
     </form>
 </div>
 
-<div><h4><%=catalogItem.trackList%></h4></div>
+<div>
+    <% for(let i = 0; i< catalogItem.trackList.length; i++) { %>
+        <% const tracks = catalogItem.trackList[i] %>
+
+        <li> <%= tracks %> </li>
+
+   <% } %>
+
+</div>
     <div>
-    <h4><%=catalogItem.collectorComments%></h4>
+    <p><%=catalogItem.collectorComments%></p>
     </br>
     <a href="<%=catalogItem.spotifyLink%>" target="_blank">Listen on Spotify</a>
     </br>
