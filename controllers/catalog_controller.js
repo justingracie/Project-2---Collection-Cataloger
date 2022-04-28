@@ -60,6 +60,8 @@ router.get("/:id/edit", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
+    let songs = req.body.trackList.split(', ');
+    req.body.trackList = songs;
     const updateCatalog = await db.Catalog.findByIdAndUpdate(
       req.params.id,
       req.body
