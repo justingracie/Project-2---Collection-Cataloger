@@ -10,6 +10,7 @@ const db = require("../models");
 
 router.get("/", async (req, res, next) => {
   try {
+      console.log(req.session);
     const catalog = await db.Catalog.find({});
     const context = { catalog };
 
