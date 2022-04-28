@@ -33,7 +33,6 @@ router.post("/", async (req, res, next) => {
   try {
       let songs = req.body.trackList.split(', ');
       req.body.trackList = songs;
-      console.log(req.body.trackList);
       const createdCatalog = await db.Catalog.create(req.body);
 
     res.redirect("/catalog");

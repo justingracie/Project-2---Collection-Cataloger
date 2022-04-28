@@ -27,8 +27,13 @@
 </div>
 
 <div>
-    
-    <h4><%=catalogItem.trackList%></h4>
+    <% for(let i = 0; i< catalogItem.trackList.length; i++) { %>
+        <% const tracks = catalogItem.trackList[i] %>
+
+        <li> <%= tracks %> </li>
+
+   <% } %>
+    <!-- <h4><%=catalogItem.trackList%></h4> -->
 </div>
     <div>
     <h4><%=catalogItem.collectorComments%></h4>
