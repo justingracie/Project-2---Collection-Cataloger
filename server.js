@@ -27,6 +27,9 @@ app.use(methodOverride('_method'));
 app.use('/catalog', controllers.catalog);
 // app.use('/review', controllers.reviews);
 
+app.get('/about', (req, res) => {
+    res.render('about.ejs')
+})
 
 //local host Port Setup
 

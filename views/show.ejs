@@ -3,46 +3,52 @@
     <%- include('partials/head.ejs', {pageName: 'Show'}) %>
 <body>
     <%-include('partials/nav.ejs') %>
+<div class="gridShow">
+    <div class="left">
+        <h1><%=catalogItem.artist%></h1>
+        </br>
+        <h4><%=catalogItem.album%></h4>
+        </br>
+        <img src="<%=catalogItem.image%>" alt="<%=catalogItem.album%>">
+        </br>
+        <h4><%=catalogItem.releaseYear%></h4>
+        </br>
+        <h4>$<%=catalogItem.itemValue%></h4>
+        </br>
+        <h4><%=catalogItem.mediaFormat%></h4>
+        </br>
+        <h4><%=catalogItem.releaseYear%></h4>
+        </br>
+        
+        <form method="GET" action="/catalog/<%=catalogItem._id%>/edit">
 
-<div class="left">
-    <h1><%=catalogItem.artist%></h1>
-    </br>
-    <h4><%=catalogItem.album%></h4>
-    </br>
-    <img src="<%=catalogItem.image%>" alt="<%=catalogItem.album%>">
-    </br>
-    <h4><%=catalogItem.releaseYear%></h4>
-    </br>
-    <h4>$<%=catalogItem.itemValue%></h4>
-    </br>
-    <h4><%=catalogItem.mediaFormat%></h4>
-    </br>
-    <h4><%=catalogItem.releaseYear%></h4>
-    </br>
+            <button type="submit" class="button">Edit Album</button>
+        
+        <form method="POST" action="/catalog/<%=catalogItem._id%>?_method=DELETE">
 
-    <a href="/catalog/<%=catalogItem._id%>/edit">Edit Album</a>
-    <form method="POST" action="/catalog/<%=catalogItem._id%>?_method=DELETE">
-        <input type="submit" value="Delete Album">
-    </form>
-</div>
+            <button type="submit" class="button">Delete Album</button>
 
-<div>
-    <% for(let i = 0; i< catalogItem.trackList.length; i++) { %>
-        <% const tracks = catalogItem.trackList[i] %>
+        </form>
+    </div>
 
-        <li> <%= tracks %> </li>
+    <div class="middle">
+        <% for(let i = 0; i< catalogItem.trackList.length; i++) { %>
+            <% const tracks = catalogItem.trackList[i] %>
 
-   <% } %>
+            <li> <%= tracks %> </li>
 
-</div>
-    <div>
-    <p><%=catalogItem.collectorComments%></p>
-    </br>
-    <a href="<%=catalogItem.spotifyLink%>" target="_blank">Listen on Spotify</a>
-    </br>
-    <a href="<%=catalogItem.appleMusicLink%>" target="_blank">Listen on Apple Music</a>
-    </br>
-</div>
+        <% } %>
+    </div>
+    
+    <div class="right">
+        <p><%=catalogItem.collectorComments%></p>
+        </br>
+        <a href="<%=catalogItem.spotifyLink%>" target="_blank">Listen on Spotify</a>
+        </br>
+        <a href="<%=catalogItem.appleMusicLink%>" target="_blank">Listen on Apple Music</a>
+        </br>
+    </div>
+    </div>
 </body>
 </html>
 

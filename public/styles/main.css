@@ -1,5 +1,11 @@
 body {
     background-color: rgb(240, 240, 240);
+    background-image: url(https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(12, 12, 12);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .album-art {
@@ -23,10 +29,35 @@ body {
     gap: 20px;
 }
 
-.left {
-    text-align: justify;
+.gridShow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-left: 200px;
 }
 
-.middle {
-    text-align: center;
+.form-label {
+    font-family: 'Roboto Mono', monospace;;
 }
+
+h1 {
+    font-family: 'Roboto Mono', monospace;;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgb(139, 203, 165);
+    color: rgb(252, 252, 252);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(255, 117, 48);
+  }
+  
+button:active {
+    background-color: rgb(7, 7, 7);
+  }

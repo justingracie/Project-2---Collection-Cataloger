@@ -4,7 +4,7 @@
 <body>
     <%- include('partials/nav.ejs') %>
     <main>
-        <h1>Add Album to Catalog </h1>
+        <h1> Add Album to Catalog </h1>
         <form method="POST" action="/catalog">
 
             <div class="mb-3">
@@ -16,10 +16,12 @@
                 <label for="album" class="form-label">Album</label>
                 <input type="text" class="form-control input" name="album" placeholder="Album name...">
             </div>
+
             <div class="mb-3">
                 <label for="image" class="form-label">Album Art</label>
                 <input type="text" class="form-control input" name="image" placeholder="Album art URL..." />
             </div>
+
             <div class="mb-3">
                 <label for="itemValue" class="form-label">Item Value</label>
                 <input type="text" class="form-control input" name="itemValue" placeholder="Cost of Album...">
@@ -55,7 +57,7 @@
                 <input type="link" class="form-control input" name="appleMusicLink" placeholder="Apple Music link URL...">
             </div>
 
-            <button type="submit" class="btn btn-outline-secondary">Add album to catalog</button>
+            <button type="submit" class="button">Add album to catalog</button>
         </form>
     </main>
 </body>
