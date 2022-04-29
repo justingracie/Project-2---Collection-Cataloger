@@ -19,10 +19,15 @@
         </br>
         <h4><%=catalogItem.releaseYear%></h4>
         </br>
+        
+        <form method="GET" action="/catalog/<%=catalogItem._id%>/edit">
 
-        <a href="/catalog/<%=catalogItem._id%>/edit">Edit Album</a>
+            <button type="submit" class="button">Edit Album</button>
+        
         <form method="POST" action="/catalog/<%=catalogItem._id%>?_method=DELETE">
-            <input type="submit" value="Delete Album">
+
+            <button type="submit" class="button">Delete Album</button>
+
         </form>
     </div>
 
@@ -34,7 +39,7 @@
 
         <% } %>
     </div>
-
+    
     <div class="right">
         <p><%=catalogItem.collectorComments%></p>
         </br>
