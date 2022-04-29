@@ -24,15 +24,35 @@ router.post('/register', async (req, res, next) => {
             return res.redirect('/login');
         }
         const salt = await bcrypt.genSalt(10);
-        console.log(salt)
         const hash = await bcrypt.hash(req.body.password, salt);
-        console.log(hash)
         req.body.password = hash;
         const newUser = await User.create(req.body);
         return res.redirect('/login');
     }catch (error){
         console.log(error);
         return res.send(error);
+    }
+});
+
+//Login Route (functional)---->
+router.post('/login', async (req, res, next) =>{
+    try {
+        const foundUser = await User.findOne({ email: req.body.email});
+        console.log(foundUser);
+        if(!foundUser)return res.redirect('/register');
+        const match = await bcrypt.compare(req.body.password, foundUser.password);
+        if(!match)return res.send('password invalid');
+        req.session.currentUser = {
+            id: foundUser._id,
+            username:foundUser.username,
+        };
+        console.log(req.session);
+
+        return res.redirect('/catalog');
+
+    }catch(error){
+        console.log(error)
+        return res.send(error)
     }
 });
 
