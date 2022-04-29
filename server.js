@@ -12,7 +12,6 @@ const MongoStore = require('connect-mongo')
 // const reviewController = require('./controllers/review_controller');
 const controllers = require('./controllers')
 
-
 require('./config/db.connection');
 app.set('view engine', 'ejs');
 //====================
@@ -30,14 +29,10 @@ app.use(
         saveUninitialized: false,
         cookie: {maxAge: 1000*60*60*24*7*2},
     }),
-)
-
-
-//routers
-
+);
+app.use('/', controllers.auth);
 app.use('/catalog', controllers.catalog);
 // app.use('/review', controllers.reviews);
-
 
 //local host Port Setup
 

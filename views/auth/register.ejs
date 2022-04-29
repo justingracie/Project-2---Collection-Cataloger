@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs', {pageName: 'Register'}) %>
+<body>
+
+    <%- include('../partials/nav.ejs') %>
+
+    <div>
+
+        <h1> Register </h1>
+        <form action="/register" method="post"></form>
+        <div>
+            <label>Username</label>
+            <div>
+                <input 
+                name="username"
+                type="text"
+                placeholder="Rad"/>
+            </div>
+        </div>
+        <div>
+            <label>Email</label>
+            <div>
+                <input 
+                name="email"
+                type="email"
+                placeholder="example@domain.com"
+                />
+            </div>
+        </div>
+        <div>
+            <label>Password</label>
+            <div>
+                <input
+                name="password"
+                type="password"
+                placeholder="*******"
+                />
+            </div>
+        </div>
+        <div>
+            <div>
+                <button>submit</button>
+            </div>
+        </div>
+            
+
+    </div>
+
+
+
+    
+</body>
+</html>
