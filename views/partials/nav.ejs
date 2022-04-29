@@ -14,5 +14,17 @@
             </li>
         </ul>
       </div>
+      <div>
+        <% if (user) { %>
+          <p><%=user.username%></p>
+          <a href="/logout">logout</a>
+          <% } %>
+       
+      <% if (!user){ %>
+        <div>
+          <a href="/login">Login</a>
+          <a href="/register">register</a>
+        </div>
+      <% } %>
   </div>
 </nav>

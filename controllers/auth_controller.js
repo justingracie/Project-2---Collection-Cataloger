@@ -5,13 +5,21 @@ const { User } = require('../models');
 
 // Register route (presentational) ---->
 router.get('/register', (req,res) => {
-    return res.render('auth/register');
+    const context = {
+        user: req.session.currentUser,
+        routes: req.session.authRoutes,
+    }
+    return res.render('auth/register', context);
 });
 
 // Login Route (presentational)---->
 
 router.get('/login', (req, res) =>{
-    res.render('auth/login');
+    const context = {
+        user: req.session.currentUser,
+        routes: req.session.authRoutes,
+    }
+    res.render('auth/login', context);
 });
 
 //Register router (functional)---->
@@ -23,6 +31,7 @@ router.post('/register', async (req, res, next) => {
         if(foundUser){
             return res.redirect('/login');
         }
+     
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(req.body.password, salt);
         req.body.password = hash;
@@ -60,7 +69,7 @@ router.post('/login', async (req, res, next) =>{
 router.get('/logout', async (req, res, next) =>{
     try {
         await req.session.destroy();
-        console.log(req.session);
+        // console.log(req.session);
         return res.redirect('/login');
 
     }catch(error){

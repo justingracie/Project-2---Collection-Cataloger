@@ -11,6 +11,7 @@ const MongoStore = require('connect-mongo')
 // const catalogController = require('./controllers/catalog_controller');
 // const reviewController = require('./controllers/review_controller');
 const controllers = require('./controllers')
+const navLinks = require('./navLinks')
 
 require('./config/db.connection');
 app.set('view engine', 'ejs');
@@ -32,6 +33,13 @@ app.use(
 );
 app.use('/', controllers.auth);
 app.use('/catalog', controllers.catalog);
+
+app.use(function (req, res, next){
+    res.locals.user = req.session.currentUser;
+    console.log(res.locals);
+    next();
+});
+app.use(navLinks);
 // app.use('/review', controllers.reviews);
 
 //local host Port Setup

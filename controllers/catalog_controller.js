@@ -12,7 +12,12 @@ router.get("/", async (req, res, next) => {
   try {
       console.log(req.session);
     const catalog = await db.Catalog.find({});
-    const context = { catalog };
+    const context = { 
+        catalog: catalog, 
+        user: req.session.currentUser,
+        routes: req.session.authRoutes,
+    };
+
 
     return res.render("index.ejs", context);
   } catch (error) {
@@ -25,7 +30,11 @@ router.get("/", async (req, res, next) => {
 //New Route ---->
 
 router.get("/new", (req, res) => {
-  res.render("new.ejs");
+    const context = {
+        user: req.session.currentUser,
+        routes: req.session.authRoutes,
+    }
+  res.render("new.ejs", context);
 });
 
 //Create Route ---->
@@ -49,7 +58,13 @@ router.post("/", async (req, res, next) => {
 router.get("/:id/edit", async (req, res, next) => {
   try {
     const updatedCatalog = await db.Catalog.findById(req.params.id);
-    return res.render("edit.ejs", { catalog: updatedCatalog });
+    const context = {
+        user: req.session.currentUser,
+        routes: req.session.authRoutes,
+        catalog: updatedCatalog
+
+    }
+    return res.render("edit.ejs", context);
   } catch (error) {
     console.log(error);
     req.error = error;
@@ -80,7 +95,11 @@ router.put("/:id", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const foundCatalog = await db.Catalog.findById(req.params.id);
-    const context = { catalogItem: foundCatalog };
+    const context = { 
+        catalogItem: foundCatalog,
+        user: req.session.currentUser,
+        routes: req.session.authRoutes, 
+    };
     res.render("show.ejs", context);
 
   } catch (error) {
