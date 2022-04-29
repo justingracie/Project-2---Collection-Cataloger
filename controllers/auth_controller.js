@@ -39,9 +39,9 @@ router.post('/login', async (req, res, next) =>{
     try {
         const foundUser = await User.findOne({ email: req.body.email});
         console.log(foundUser);
-        if(!foundUser)return res.redirect('/register');
+        if(!foundUser)return res.send('The password or the Username are invalid');
         const match = await bcrypt.compare(req.body.password, foundUser.password);
-        if(!match)return res.send('password invalid');
+        if(!match)return res.send('The password or the Username are invalid');
         req.session.currentUser = {
             id: foundUser._id,
             username:foundUser.username,
@@ -49,6 +49,19 @@ router.post('/login', async (req, res, next) =>{
         console.log(req.session);
 
         return res.redirect('/catalog');
+
+    }catch(error){
+        console.log(error)
+        return res.send(error)
+    }
+});
+
+//Logout Route(functional)---->
+router.get('/logout', async (req, res, next) =>{
+    try {
+        await req.session.destroy();
+        console.log(req.session);
+        return res.redirect('/login');
 
     }catch(error){
         console.log(error)
