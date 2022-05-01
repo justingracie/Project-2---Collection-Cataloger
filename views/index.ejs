@@ -4,10 +4,10 @@
   <body>
     <%- include('partials/nav.ejs') %>
     <main class="container">
-      <div class="grid">
+      <div id="grid">
         <% for(let i = 0; i < catalog.length; i++){ %> <% const album =
         catalog[i] %>
-        <div>
+        <div class="album whitebox">
             <a href="/catalog/<%= album._id%>"> 
               <img src="<%=album.image%>" class="img-thumbnail album-art" alt="<%=album.name %>">
             </a>
@@ -19,5 +19,6 @@
         <% } %>
       </div>
     </main>
+    <%- include('partials/footer.ejs') %>
   </body>
 </html>

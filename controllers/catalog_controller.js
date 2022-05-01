@@ -60,7 +60,7 @@ router.get("/:id/edit", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
-    let songs = req.body.trackList.split(', ');
+    let songs = req.body.trackList.split(',').map(str => str.trim()); // removes space at beginning and end of the string
     req.body.trackList = songs;
     const updateCatalog = await db.Catalog.findByIdAndUpdate(
       req.params.id,

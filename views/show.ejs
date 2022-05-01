@@ -3,13 +3,16 @@
     <%- include('partials/head.ejs', {pageName: 'Show'}) %>
 <body>
     <%-include('partials/nav.ejs') %>
-<div class="gridShow">
+    
+<div class="gridShow container">
+    
     <div class="left">
         <h1><%=catalogItem.artist%></h1>
         </br>
         <h4><%=catalogItem.album%></h4>
         </br>
-        <img src="<%=catalogItem.image%>" alt="<%=catalogItem.album%>">
+        <img src="<%=catalogItem.image%>" class="img-thumbnail album-art" alt="<%=catalogItem.album%>">
+        </br>
         </br>
         <h4><%=catalogItem.releaseYear%></h4>
         </br>
@@ -17,12 +20,12 @@
         </br>
         <h4><%=catalogItem.mediaFormat%></h4>
         </br>
-        <h4><%=catalogItem.releaseYear%></h4>
-        </br>
-        
+
+
         <form method="GET" action="/catalog/<%=catalogItem._id%>/edit">
 
             <button type="submit" class="button">Edit Album</button>
+        </form>
         
         <form method="POST" action="/catalog/<%=catalogItem._id%>?_method=DELETE">
 
@@ -32,23 +35,37 @@
     </div>
 
     <div class="middle">
+        <h4>Track List</h4>
+        <div class="whitebox">
         <% for(let i = 0; i< catalogItem.trackList.length; i++) { %>
             <% const tracks = catalogItem.trackList[i] %>
 
             <li> <%= tracks %> </li>
 
         <% } %>
+        </div>
     </div>
     
     <div class="right">
-        <p><%=catalogItem.collectorComments%></p>
-        </br>
-        <a href="<%=catalogItem.spotifyLink%>" target="_blank">Listen on Spotify</a>
-        </br>
-        <a href="<%=catalogItem.appleMusicLink%>" target="_blank">Listen on Apple Music</a>
-        </br>
+        <h4>Collector's Comments</h4>
+        <div class="whitebox">
+            <p><%=catalogItem.collectorComments%></p>
+        </div>
+    <br/>
+    <br/>
+   
+        <h4>Music Links</h4>
+        <div class="whitebox">
+        <a href="<%=catalogItem.spotifyLink%>" target="_blank" class="btn btn-outline-success">Listen on Spotify</a>
+     
+        <a href="<%=catalogItem.appleMusicLink%>" target="_blank" class="btn btn-outline-primary">Listen on Apple Music</a>
+        </div>
     </div>
-    </div>
+
+</div>
+    
 </body>
 </html>
+
+
 
