@@ -3,61 +3,64 @@
 <%- include('partials/head.ejs', { pageName: 'Add Album to Catelog' }) %>
 <body>
     <%- include('partials/nav.ejs') %>
-    <main>
+    <main class="newForm container whitebox">
+        
         <h1> Add Album to Catalog </h1>
-        <form method="POST" action="/catalog">
+        <form method="POST" action="/catalog" class="row g-3">
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="artist" class="form-label">Artist</label>
                 <input type="text" class="form-control input" name="artist" placeholder="Artist name...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="album" class="form-label">Album</label>
                 <input type="text" class="form-control input" name="album" placeholder="Album name...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="image" class="form-label">Album Art</label>
                 <input type="text" class="form-control input" name="image" placeholder="Album art URL..." />
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="itemValue" class="form-label">Item Value</label>
                 <input type="text" class="form-control input" name="itemValue" placeholder="Cost of Album...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="mediaFormat" class="form-label">Media Format</label>
                 <input type="text" class="form-control input" name="mediaFormat" placeholder="Is it a CD, Cassette, Vinyl?...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="releaseYear" class="form-label">Release Year</label>
                 <input type="text" class="form-control input" name="releaseYear" placeholder="Year of release...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="trackList" class="form-label">Track List</label>
                 <input type="text" class="form-control input" name="trackList" placeholder="Name of the track...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="collectorComments" class="form-label">Collector's Comments</label>
                 <input type="text" class="form-control input" name="collectorComments" placeholder="Comment...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="link" class="form-label">Spotify Link</label>
                 <input type="link" class="form-control input" name="spotifyLink" placeholder="Spotify link URL...">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="link" class="form-label">Apple Music Link</label>
                 <input type="link" class="form-control input" name="appleMusicLink" placeholder="Apple Music link URL...">
             </div>
 
+            <div class="col-md-12">
             <button type="submit" class="button">Add album to catalog</button>
+            </div>
         </form>
     </main>
 </body>
