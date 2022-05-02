@@ -107,9 +107,9 @@ li{
   list-style: none;
 }
 
-footer {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
   text-align: center;
   padding: 20px;
   margin-top: 25em;
 }
+
