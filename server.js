@@ -41,4 +41,10 @@ app.use(navLinks);
 
 //local host Port Setup
 
+//About page router---->
+
+app.get('/about', (req, res) => {
+    res.render('about.ejs');
+  });
+
 app.listen(PORT, ()=> console.log(`listening on port: ${PORT}`))
