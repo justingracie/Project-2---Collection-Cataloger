@@ -39,9 +39,11 @@ app.use(function (req, res, next){
 });
 app.use(navLinks);
 
+// app.use('/catalog', authRequired, controllers.catalog)
+
 //local host Port Setup
 
-//About page router---->
+//About page route---->
 
 app.get('/about', (req, res) => {
     res.render('about.ejs');
