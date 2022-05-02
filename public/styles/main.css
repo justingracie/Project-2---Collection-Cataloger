@@ -118,3 +118,8 @@ li{
 footer {
   margin: 20em
 }
+.about{
+    width: 600px;
+    text-align: center;
+    justify-content: center;
+}
