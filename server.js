@@ -3,7 +3,7 @@
 //====================
 
 const express = require('express');
-const PORT = 4000;
+
 const app = express();
 const methodOverride = require('method-override');
 const session =require('express-session');
@@ -47,4 +47,4 @@ app.get('/about', (req, res) => {
     res.render('about.ejs');
   });
 
-app.listen(PORT, ()=> console.log(`listening on port: ${PORT}`))
+app.listen(process.env.PORT || 4000)

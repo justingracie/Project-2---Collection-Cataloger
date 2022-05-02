@@ -18,4 +18,3 @@ let navLinks = function navLinks(req, res, next){
 };
 
 module.exports = navLinks;
-
