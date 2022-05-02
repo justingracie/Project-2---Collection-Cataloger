@@ -3,51 +3,63 @@
     <%- include('partials/head.ejs', {pageName: 'Catalog'}) %>
 <body>
     <%-include('partials/nav.ejs') %>
+    <main class="newForm container whitebox">
+    <form method="POST" action="/catalog/<%= catalog._id %>?_method=PUT" class="row g-3">
+       
+        <div class="col-md-6">
+            <label for="artist" class="form-label">Artist</label>
+            <input type="text" class="form-control input" name="artist" value="<%=catalog.artist%>"">
+        </div>
 
-    <form method="POST" action="/catalog/<%= catalog._id %>?_method=PUT">
-        <div>
-            <label>Artist</label>
-            <input type="text" name="artist" value="<%=catalog.artist%>">
+        <div class="col-md-6">
+            <label for="artist" class="form-label">Album</label>
+            <input type="text" class="form-control input" name="album" value="<%=catalog.album%>"">
         </div>
-        <div>
-            <label>Album</label>
-            <input type="text" name="album" value="<%=catalog.album%>">
+       
+        <div class="col-md-6">
+            <label for="Image" class="form-label">Image</label>
+            <input type="img" class="form-control input" name="image" value="<%=catalog.image%>"">
         </div>
-        <div>
-            <label>Image</label>
-            <input type="img" name="image" value="<%=catalog.image%>">
+        
+        <div class="col-md-6">
+            <label for="itemValue" class="form-label">Item Value</label>
+            <input type="text" class="form-control input" name="itemValue" value="<%=catalog.itemValue%>"">
         </div>
-        <div>
-            <label>Item Value</label>
-            <input type="number" name="itemValue" value="<%=catalog.itemValue%>">
+        
+        <div class="col-md-6">
+            <label for="mediaFormat" class="form-label">Media Format</label>
+            <input type="text" class="form-control input" name="mediaFormat" value="<%=catalog.mediaFormat%>"">
         </div>
-        <div>
-            <label>Media Format</label>
-            <input type="text" name="mediaFormat" value="<%=catalog.mediaFormat%>">
+        <div class="col-md-6">
+            <label for="releaseYear" class="form-label">Release Year</label>
+            <input type="text" class="form-control input" name="releaseYear" value="<%=catalog.releaseYear%>"">
         </div>
-        <div>
-            <label>Release Year</label>
-            <input type="text" name="releaseYear" value="<%=catalog.releaseYear%>">
+
+        <div class="col-md-6">
+            <label for="trackList" class="form-label">Track List</label>
+            <input type="text" class="form-control input" name="trackList" value="<%=catalog.trackList%>"">
         </div>
-        <div>
-            <label>Track List</label>
-            <input type="text" name="trackList" value="<%=catalog.trackList%>">
+
+        <div class="col-md-6">
+            <label for="collectorComments" class="form-label">Collector Comments</label>
+            <input type="text" class="form-control input" name="collectorComments" value="<%=catalog.collectorComments%>"">
         </div>
-        <div>
-            <label>Collector Comments</label>
-            <input type="text" name="collectorComments" value="<%=catalog.collectorComments%>">
+
+        <div class="col-md-6">
+            <label for="spotifyLink" class="form-label">Spotify Link</label>
+            <input type="link" class="form-control input" name="spotifyLink" value="<%=catalog.spotifyLink%>"">
         </div>
-        <div>
-            <label>Spotify Link</label>
-            <input type="text" name="spotifyLink" value="<%=catalog.spotifyLink%>">
+
+        <div class="col-md-6">
+            <label for="appleMusicLink" class="form-label">Apple Music Link</label>
+            <input type="link" class="form-control input" name="appleMusicLink" value=""<%=catalog.appleMusicLink%>"">
         </div>
-        <div>
-            <label>Apple Music Link</label>
-            <input type="text" name="appleMusicLink" value="<%=catalog.appleMusicLink%>">
+
+        <div class="col-md-12">
+        <button type="submit" class="button">Edit Item</button>
         </div>
-        <input type="submit" value="Edit Item">
-     
         
     </form>
+</main>
 </body>
 </html>

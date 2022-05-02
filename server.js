@@ -8,8 +8,6 @@ const app = express();
 const methodOverride = require('method-override');
 const session =require('express-session');
 const MongoStore = require('connect-mongo')
-// const catalogController = require('./controllers/catalog_controller');
-// const reviewController = require('./controllers/review_controller');
 const controllers = require('./controllers')
 const navLinks = require('./navLinks')
 
@@ -40,7 +38,6 @@ app.use(function (req, res, next){
     next();
 });
 app.use(navLinks);
-// app.use('/review', controllers.reviews);
 
 //local host Port Setup
 

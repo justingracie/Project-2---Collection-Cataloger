@@ -1,24 +1,114 @@
 body {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
+  background-image: url(https://previews.123rf.com/images/belov1409/belov14091604/belov1409160400009/56211322-%E3%82%B7%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E3%82%B3%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%88%E3%81%AE%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3%E3%81%A7%E3%81%99%E3%80%82%E7%81%B0%E8%89%B2%E3%81%AE%E8%83%8C%E6%99%AF.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  color: rgb(12, 12, 12);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  font-family: "Roboto Mono", monospace;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: rgb(139, 203, 165);
+  color: rgb(252, 252, 252);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(255, 117, 48);
+}
+
+button:active {
+  background-color: rgb(7, 7, 7);
+}
+
+footer {
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  text-align: center;
+  padding: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.album {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 500ms ease-in;
 }
 
 .album-art {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  
 }
 
-.input {
-    max-width: 500px;
+.album:hover {
+    transform: scale(1.10);
 }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
+.newForm {
+    text-align: center;
+    margin: 20px auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+.gridShow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gridShow div {
+  padding: 10px;
+}
+
+.whitebox {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.left form{
+    display:inline-block;
+}
+
+.middle {
+  text-align: center;
+}
+
+.right {
+  text-align: center;
+}
+
+.aboutMe {
+  margin: 20px auto;
+  text-align: center;
+}
+h1 {
+  font-family: "Roboto Mono", monospace;
+}
+
+li{
+  list-style: none;
 }
