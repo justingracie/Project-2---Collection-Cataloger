@@ -108,3 +108,7 @@ footer {
 h1 {
   font-family: "Roboto Mono", monospace;
 }
+
+li{
+  list-style: none;
+}
