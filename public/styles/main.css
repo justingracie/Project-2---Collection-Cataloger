@@ -32,14 +32,6 @@ button:active {
   background-color: rgb(7, 7, 7);
 }
 
-footer {
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 0;
-  margin-top: 20em;
-}
-
 #grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -115,11 +107,9 @@ li{
   list-style: none;
 }
 
-footer {
-  margin: 20em
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  text-align: center;
+  padding: 20px;
+  margin-top: 25em;
 }
-.about{
-    width: 600px;
-    text-align: center;
-    justify-content: center;
-}
+
