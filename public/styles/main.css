@@ -1,8 +1,8 @@
 body {
   background-color: rgb(240, 240, 240);
-  background-image: url(https://previews.123rf.com/images/belov1409/belov14091604/belov1409160400009/56211322-%E3%82%B7%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E3%82%B3%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%88%E3%81%AE%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3%E3%81%A7%E3%81%99%E3%80%82%E7%81%B0%E8%89%B2%E3%81%AE%E8%83%8C%E6%99%AF.jpg);
+  background-image: url(https://as2.ftcdn.net/v2/jpg/00/64/56/71/1000_F_64567187_p52ofXA6eb9NtT5S4ep0BtrfBnmr4jHj.jpg);
   background-position: center;
-  background-repeat: repeat;
+  background-size:110% 100%;
   color: rgb(12, 12, 12);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -36,6 +36,8 @@ footer {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
   text-align: center;
   padding: 20px;
+  margin-bottom: 0;
+  margin-top: 20em;
 }
 
 #grid {

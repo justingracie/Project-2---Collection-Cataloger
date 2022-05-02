@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
-
 //====================
 //  ROUTES
 //====================
@@ -30,11 +29,16 @@ router.get("/", async (req, res, next) => {
 //New Route ---->
 
 router.get("/new", (req, res) => {
-    const context = {
-        user: req.session.currentUser,
-        routes: req.session.authRoutes,
+ 
+  const context = {
+      user: req.session.currentUser,
+      routes: req.session.authRoutes,
+  }
+  if(req.session.currentUser){
+      res.render("new.ejs", context);
+    }else{
+      return res.redirect('/login');
     }
-  res.render("new.ejs", context);
 });
 
 //Create Route ---->
@@ -61,7 +65,7 @@ router.get("/:id/edit", async (req, res, next) => {
     const context = {
         user: req.session.currentUser,
         routes: req.session.authRoutes,
-        catalog: updatedCatalog
+        catalog: updatedCatalog 
 
     }
     return res.render("edit.ejs", context);
@@ -76,13 +80,18 @@ router.get("/:id/edit", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
-    let songs = req.body.trackList.split(',').map(str => str.trim()); // removes space at beginning and end of the string
-    req.body.trackList = songs;
-    const updateCatalog = await db.Catalog.findByIdAndUpdate(
-      req.params.id,
-      req.body
-    );
-    return res.redirect(`${req.params.id}`);
+    if(req.session.currentUser){
+      let songs = req.body.trackList.split(',').map(str => str.trim()); // removes space at beginning and end of the string
+      req.body.trackList = songs;
+      const updateCatalog = await db.Catalog.findByIdAndUpdate(
+        req.params.id,
+        req.body
+      );
+      return res.redirect(`${req.params.id}`);
+
+    }else{
+      return res.redirect('/login');
+    }
   } catch (error) {
     console.log(error);
     req.error = error;
@@ -113,16 +122,18 @@ router.get("/:id", async (req, res, next) => {
 
 router.delete('/:id', async (req, res, next)=>{
     try{
+      if(req.session.currentUser){
         const deletedCatalog = await db.Catalog.findByIdAndDelete(req.params.id);
         res.redirect('/catalog');
+      }else{
+        return res.redirect('/login');
+      }
     }catch(error){
-    console.log(error);
-    req.error = error;
-    return next();
+      console.log(error);
+      req.error = error;
+      return next();
     }
 });
-
-//track function---->
 
 
 module.exports = router;
