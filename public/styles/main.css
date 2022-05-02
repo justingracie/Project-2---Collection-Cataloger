@@ -36,6 +36,8 @@ footer {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
   text-align: center;
   padding: 20px;
+  margin-top: 20em;
+  bottom: 0;
 }
 
 #grid {
