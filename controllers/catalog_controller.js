@@ -81,7 +81,9 @@ router.get("/:id/edit", async (req, res, next) => {
 router.put("/:id", async (req, res, next) => {
   try {
     if(req.session.currentUser){
-      let songs = req.body.trackList.split(',').map(str => str.trim()); // removes space at beginning and end of the string
+      let songs = req.body.trackList.split(',').map(str => str.trim()); 
+      // tracklist is a string and the comma is a delimeter(seperator) to split the string into an array of strings. Then we map over the array of strings and trim the whitepsace off before or after the comma.
+      // removes space at beginning and end of the string
       req.body.trackList = songs;
       const updateCatalog = await db.Catalog.findByIdAndUpdate(
         req.params.id,

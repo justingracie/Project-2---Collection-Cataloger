@@ -1,11 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color: rgb(240, 240, 240);
-  background-image: url(https://as2.ftcdn.net/v2/jpg/00/64/56/71/1000_F_64567187_p52ofXA6eb9NtT5S4ep0BtrfBnmr4jHj.jpg);
-  background-position: center;
-  background-size:110% 100%;
+  background-image: url(https://img.freepik.com/free-photo/white-grey-marble-texture-background-natural-pattern-with-high-resolution-tiles-luxury-stone-floor-seamless-glitter-interior-exterior_38607-418.jpg?w=2000);
+  background-repeat: repeat;
   color: rgb(12, 12, 12);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -126,6 +133,7 @@ li{
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
   text-align: center;
   padding: 20px;
-  margin-top: 25em;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
