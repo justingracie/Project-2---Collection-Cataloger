@@ -1,87 +1,36 @@
-# Music Collection Cataloger
+# TapeDisc
 
-This site is meant to be used as a cataloging tools for collectors of Vinyl, CDs, and Cassette tapes.  Collectors can add their collections to the website to keep track of an extensive collection or just show off some cool items they've come across. Think Discogs meets social media. 
-
-# Project Plan
-
-In this Project Jacob and I will be building a Full CRUD express application. When buildling out our application we will divide respobsiblities as follows.  Directories and files Justin: Config/db.connections, Controllers, Server.js, and Models/.  Directories and files Jacob: /views including ejs files and partials/ public/styles main.css.  Jacob will take the lead on styling methods based on wireframes with Justin consulting along the way. Justin will setup the github, and mongoDB with sharing permissions. 
-
-* Routes
-
-- '/' - GET - Index - retrieves entire Catalog with artist, ablum, and album image. 
-- '/:id' - GET - Show - retrieves single album with displaying details with Edit and Delete buttons.
-- '/new' - GET - New - displays a form to add new items to the catalog.
-- '/' - POST - Create - renders the new album info to the catalog.
-- '/:id/edit' - PUT - Update - this route will send updated data to the selected album. 
-- '/:id' - DELETE - Delete - deletes an indvidual album and associated data from the Catalog.
-
-# Database Models planning
-
-* Catalog Schema atrributes: 
+This site is meant to be used as a cataloging tools for collectors of Vinyl, CDs, and Cassette tapes.  Collectors can add their collections to the website to keep track of an extensive collection or just show off some cool items they've come across. Visitors to the site are welcome to peruse the Catalog no strings attached, if you feel inspired to share your collection just sign up and start adding it today!
 
 
-!["Catalog"](./Images/CatalogSchema.PNG)
+# Images of the Site
+
+!["AppPic1"](./Images/TapeDisc_1.PNG)
+
+!["AppPic2"](./Images/TapeDisc_2.PNG)
+
+!["AppPic3"](./Images/TapeDisc_3.PNG)
+
+!["AppPic4"](./Images/TapeDisc_4.PNG)
 
 
-* Review Schema (review will be referenced to Catalog):
+# Tech Used
 
-
-!["Review"](./Images/ReviewSchema.PNG)
-
-User will be stretch based on User Authenitcation capability: 
-
-* User Schema:
-
-- name: string
-- email: string
-
-
-!["ERD"](./Images/ERD_Diagram.PNG)
+JavaScript, HTML, CSS, Bootstrap, Adobe Images, Github, Mongoose, Express, Node
 
 
 
-# User Story
+# Next Steps
 
-Our website is going to be a resource for music media collectors to catalog their collections, provide write ups, estimate collection values, and view the collections of others.  Users will be able to create, read, update, and delete items from their collections. They will also be able to comment on individual collections of others.
-
-# Wireframe
-!["WireFrame"](./Images/WireFrame.PNG)
-
-# MVP
-
-* Our Minimum Viable Product Goals: 
-
- Users should have full CRUD controls to Create, Read, Update, Delete items from their music collections, and leave reviews of individual items. 
-
-* Index Page Include: 
-
-- Artist
-- Album Title
-- Image of album cover as clickable link to details page
-
-* Details page include: 
-
-- Tracklist
-- Approximate market Value
-- Link to edit the item
-- Review by Owner Part (of initial collection creation)
-- Format: Vinyl, cassette, CD
-- Year of release
-- Genre
-- Delete button to remove item from Catalog
-- Links to album on Popular streaming services
-- Basic styling with flex box and grid
-
-# Stretch
-
-- User Authenication
-- Sass Styling
-- organize collections alphabettically or by Genre
-- Music Blog
-- Gear Section: For musicians to catalog and submit write ups about their gear purchases.
-- Reviews of albums by site visitors.
+Future versions of this app will include a new page to show the entire entered catalog of individual users, there will also be added capabilities for users to leave comments or reveiws on other members collection items.   I would also like to implement a music related BLOG area. 
 
 
 # References
 
 https://www.discogs.com/
+
+https://css-tricks.com/
+
+https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client
+
+
