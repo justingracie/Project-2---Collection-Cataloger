@@ -1,11 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color: rgb(240, 240, 240);
-  background-image: url(https://as2.ftcdn.net/v2/jpg/00/64/56/71/1000_F_64567187_p52ofXA6eb9NtT5S4ep0BtrfBnmr4jHj.jpg);
-  background-position: center;
-  background-size:110% 100%;
+  background-image: url(https://img.freepik.com/free-photo/white-grey-marble-texture-background-natural-pattern-with-high-resolution-tiles-luxury-stone-floor-seamless-glitter-interior-exterior_38607-418.jpg?w=2000);
+  background-repeat: repeat;
   color: rgb(12, 12, 12);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -37,6 +44,22 @@ button:active {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  #grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+    #grid {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+  #grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .album {
@@ -79,7 +102,7 @@ button:active {
 .whitebox {
     background-color: rgba(255, 255, 255, 0.65);
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px 1px 10px 1px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -99,6 +122,13 @@ button:active {
   margin: 20px auto;
   text-align: center;
 }
+
+.about {
+  max-width: 600px;
+  justify-content: center;
+  margin-left: 350;
+}
+
 h1 {
   font-family: "Roboto Mono", monospace;
 }
@@ -107,3 +137,10 @@ li{
   list-style: none;
 }
 
+footer {
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  text-align: center;
+  padding: 20px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}

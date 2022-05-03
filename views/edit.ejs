@@ -3,7 +3,8 @@
     <%- include('partials/head.ejs', {pageName: 'Catalog'}) %>
 <body>
     <%-include('partials/nav.ejs') %>
-    <main class="newForm container whitebox">
+    <main class="container">
+        <div class="newForm whitebox">
     <form method="POST" action="/catalog/<%= catalog._id %>?_method=PUT" class="row g-3">
        
         <div class="col-md-6">
@@ -60,6 +61,7 @@
         </div>
         
     </form>
+    </div>
 </main>
 <%- include('partials/footer.ejs') %>
 </body>
