@@ -2,50 +2,40 @@
 <html lang="en">
     <%- include('../partials/head.ejs', {pageName: 'Register'}) %>
 <body>
-
+    <main class="container">
+        <div class="newForm whitebox">
     <%- include('../partials/nav.ejs') %>
 
-    <div>
+        <div>
 
-        <h1> Register </h1>
-        <form action="/register" method="post">
-        <div>
-            <label> Username </label>
+            <h1> Register </h1>
+            <form action="/register" method="POST" class="row g-3">
             <div>
-                <input 
-                name="username"
-                type="text"
-                placeholder="Rad"/>
-            </div>
-        </div>
-        <div>
-            <label> Email </label>
+                <label> Username </label>
+                    <div>
+                        <input type="text" class="form-control input" name="username" placeholder="Rad Dads">
+                    </div>
             <div>
-                <input 
-                name="email"
-                type="email"
-                placeholder="example@domain.com"
-                />
+                <label> Email </label>
+                    <div>
+                        <input type="email" class="form-control input" name="email" placeholder="Example@domain.com...">
+                    </div>
             </div>
-        </div>
-        <div>
-            <label> Password </label>
             <div>
-                <input
-                name="password"
-                type="password"
-                placeholder="*******"
-                />
+                <label> Password </label>
+                    <div>
+                        <input type="password" class="form-control input" name="password" placeholder="*******">
+                    </div>
             </div>
-        </div>
-        <div>
             <div>
-                <button> Submit </button>
+                <br/>
+                <div>
+                    <button type="submit" class="button">Submit</button>
+                </div>
             </div>
+        </form>
+    </main>        
         </div>
-    </form>
-            
-
     </div>
 
 
