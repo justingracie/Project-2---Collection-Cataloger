@@ -4,34 +4,22 @@
     <%- include('../partials/head.ejs', {pageName: 'Login'}) %>
 
 <body>
-    <main class="container">
-    <div class="newForm whitebox">
     <%- include('../partials/nav.ejs') %>
-
-        <div>
-            <h1> Login </h1>
-            <form action="/login" method="POST" class="row g-3">
-                <div>
-                    <label> Email </label>
-                    <div>
-                        <input type="email" class="form-control input" name="email" placeholder="Example@domain.com...">
-                    </div>
-                </div>
-                <div>
-                    <label> Password </label>
-                    <div>
-                        <input type="password" class="form-control input" name="password" placeholder="*******">
-                    </div>
-                </div>
-                <div>
-                    <br/>
-                    <div>
-                        <button type="submit" class="button">Submit</button>
-                    </div>
+        <main class="container">
+            <div class="newForm whitebox">
+                <h1> Login </h1>
+                <form action="/register" method="POST" class="row g-3 justify-content-center">
+                    <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control input" name="email" placeholder="elon@twitter.com">
+                
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control input" name="password" placeholder="*******">
+                <br/>
+                    <button type="submit" class="button">Submit</button>
                 </div>
             </form>
         </div>
-    </div>
-    </main>
+    </main>   
 </body>
 </html>

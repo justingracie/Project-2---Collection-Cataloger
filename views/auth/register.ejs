@@ -2,43 +2,25 @@
 <html lang="en">
     <%- include('../partials/head.ejs', {pageName: 'Register'}) %>
 <body>
+    <%- include('../partials/nav.ejs') %>
     <main class="container">
         <div class="newForm whitebox">
-    <%- include('../partials/nav.ejs') %>
-
-        <div>
-
             <h1> Register </h1>
-            <form action="/register" method="POST" class="row g-3">
-            <div>
-                <label> Username </label>
-                    <div>
-                        <input type="text" class="form-control input" name="username" placeholder="Rad Dads">
-                    </div>
-            <div>
-                <label> Email </label>
-                    <div>
-                        <input type="email" class="form-control input" name="email" placeholder="Example@domain.com...">
-                    </div>
-            </div>
-            <div>
-                <label> Password </label>
-                    <div>
-                        <input type="password" class="form-control input" name="password" placeholder="*******">
-                    </div>
-            </div>
-            <div>
+            <form action="/register" method="POST" class="row g-3 justify-content-center">
+                <div class="col-md-6">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control input" name="username" placeholder="Rad Dads">
+                
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control input" name="email" placeholder="elon@twitter.com">
+                
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control input" name="password" placeholder="*******">
                 <br/>
-                <div>
                     <button type="submit" class="button">Submit</button>
                 </div>
-            </div>
-        </form>
-    </main>        
+            </form>
         </div>
-    </div>
-
-
-    
+    </main>          
 </body>
 </html>
