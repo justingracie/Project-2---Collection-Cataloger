@@ -39,7 +39,6 @@ app.use(function (req, res, next) {
 });
 app.use(navLinks);
 
-// app.use('/catalog', authRequired, controllers.catalog)
 
 //local host Port Setup
 

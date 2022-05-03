@@ -122,6 +122,13 @@ button:active {
   margin: 20px auto;
   text-align: center;
 }
+
+.about {
+  max-width: 600px;
+  justify-content: center;
+  margin-left: 350;
+}
+
 h1 {
   font-family: "Roboto Mono", monospace;
 }
@@ -130,6 +137,7 @@ li{
   list-style: none;
 }
 
+footer {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
   text-align: center;
   padding: 20px;
