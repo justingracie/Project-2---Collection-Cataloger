@@ -49,7 +49,7 @@ router.post("/", async (req, res, next) => {
       req.body.trackList = songs;
       const createdCatalog = await db.Catalog.create(req.body);
 
-    res.redirect("/catalog");
+      res.redirect("/catalog");
   } catch (error) {
     console.log(error);
     req.error = error;
