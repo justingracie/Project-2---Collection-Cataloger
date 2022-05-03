@@ -3,7 +3,8 @@
 <%- include('partials/head.ejs', { pageName: 'Add Album to Catelog' }) %>
 <body>
     <%- include('partials/nav.ejs') %>
-    <main class="newForm container whitebox">
+    <main class="container">
+        <div class="newForm whitebox">
         
         <h1> Add Album to Catalog </h1>
         <form method="POST" action="/catalog" class="row g-3">
@@ -62,6 +63,7 @@
             <button type="submit" class="button">Add album to catalog</button>
             </div>
         </form>
+        </div>
     </main>
     <%- include('partials/footer.ejs') %>
 </body>
